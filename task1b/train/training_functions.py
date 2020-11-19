@@ -9,6 +9,25 @@ from funcs import *
 from utils import *
 
 
+class threadsafe_iter:
+    def __init__(self, it):
+        self.it = it
+        self.lock = threading.Lock()
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        with self.lock:
+            return self.it.__next__()
+        
+        
+def threadsafe_generator(f):
+    def g(*a, **kw):
+        return threadsafe_iter(f(*a, **kw))
+    return g
+
+    
 class Generator_balanceclass_timefreqmask_nocropping_splitted():
     def __init__(self, feat_path, train_csv, total_csv, experiments, feat_dim, batch_size=32, alpha=0.4, shuffle=True, splitted_num=4): 
         self.feat_path = feat_path
@@ -142,22 +161,5 @@ class LR_WarmRestart(keras.callbacks.Callback):
         K.set_value(self.model.optimizer.lr,lr)
 
         
-class threadsafe_iter:
-    def __init__(self, it):
-        self.it = it
-        self.lock = threading.Lock()
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        with self.lock:
-            return self.it.__next__()
-        
-        
-def threadsafe_generator(f):
-    def g(*a, **kw):
-        return threadsafe_iter(f(*a, **kw))
-    return g
 
 

@@ -15,17 +15,21 @@ from funcs import *
 from mobnet import model_mobnet
 from training_functions import *
 
-from tensorflow import ConfigProto
-from tensorflow import InteractiveSession
+# from tensorflow import ConfigProto
+# from tensorflow import InteractiveSession
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+
 
 config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
-data_path = 'data_2020/'
+data_path = '../data_2020/'
 train_csv = data_path + 'evaluation_setup/fold1_train.csv'
 val_csv = data_path + 'evaluation_setup/fold1_evaluate.csv'
-feat_path = 'features/logmel128_scaled_d_dd/'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+feat_path = '../../data/features/logmel128_scaled/'
 experiments = 'exp_smallfcnn'
 
 if not os.path.exists(experiments):

@@ -19,11 +19,12 @@ sys.path.append("..")
 from utils import *
 from funcs import *
 
-from tensorflow import ConfigProto
-from tensorflow import InteractiveSession
-config = ConfigProto()
+import tensorflow as tf
+# from tensorflow import ConfigProto
+# from tensorflow import InteractiveSession
+config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
-session = InteractiveSession(config=config)
+session = tf.compat.v1.InteractiveSession(config=config)
 
 val_csv = 'data_2020/evaluation_setup/fold1_evaluate.csv'
 feat_path = 'features/logmel128_scaled_d_dd/'
