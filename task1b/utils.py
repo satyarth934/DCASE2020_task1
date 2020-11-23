@@ -61,7 +61,7 @@ def load_data_2020_splitted(feat_path, csv_path, feat_dim, idxlines, file_type):
                 feat_mtx.append(temp['feat_data'])
 
         feat_mtx = np.array(feat_mtx)
-
+        
         return feat_mtx, labels
 
 def load_data_2020_withaug_splitted(csv_path, feat_dim, idxlines, file_type):

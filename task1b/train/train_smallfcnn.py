@@ -1,6 +1,6 @@
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import numpy as np
 import keras
@@ -22,10 +22,11 @@ config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
-data_path = 'data_2020/'
+data_path = '../data_2020/'
 train_csv = data_path + 'evaluation_setup/fold1_train.csv'
 val_csv = data_path + 'evaluation_setup/fold1_evaluate.csv'
-feat_path = 'features/logmel128_scaled_d_dd/'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+feat_path = '../../data/features/logmel128_scaled/'
 experiments = 'exp_smallfcnn'
 
 if not os.path.exists(experiments):
@@ -39,7 +40,7 @@ num_freq_bin = 128
 num_time_bin = 461
 num_classes = 3
 max_lr = 0.1
-batch_size = 32
+batch_size = 64
 num_epochs = 500
 mixup_alpha = 0.4
 sample_num = len(open(train_csv, 'r').readlines()) - 1
@@ -59,8 +60,8 @@ model.summary()
 lr_scheduler = LR_WarmRestart(nbatch=np.ceil(sample_num/batch_size), Tmult=2,
                               initial_lr=max_lr, min_lr=max_lr*1e-4,
                               epochs_restart = [3.0, 7.0, 15.0, 31.0, 63.0,127.0,255.0]) 
-save_path = experiments + "/model-{epoch:02d}-{val_acc:.4f}.hdf5"
-checkpoint = keras.callbacks.ModelCheckpoint(save_path, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
+save_path = experiments + "/model-{epoch:02d}-{val_accuracy:.4f}.hdf5"
+checkpoint = keras.callbacks.ModelCheckpoint(save_path, monitor='val_accuracy', verbose=1, save_best_only=False, mode='max')
 callbacks = [lr_scheduler, checkpoint]
 
 train_data_generator = Generator_balanceclass_timefreqmask_nocropping_splitted(feat_path, train_csv, total_csv, experiments, num_freq_bin, 
@@ -71,8 +72,8 @@ history = model.fit_generator(train_data_generator,
                               validation_data=(data_val, y_val),
                               epochs=num_epochs, 
                               verbose=1, 
-                              workers=4,
-                              max_queue_size = 100,
+                              workers=2,
+                              max_queue_size = 20,
                               callbacks=callbacks,
                               steps_per_epoch=np.ceil(sample_num/batch_size)
                               ) 

@@ -2,3 +2,5 @@ task1b/__pycache__/
 task1b/eval/__pycache__/
 task1b/train/__pycache__/
 data/
+task1b/train/exp_mobnet/
+task1b/train/exp_smallfcnn/

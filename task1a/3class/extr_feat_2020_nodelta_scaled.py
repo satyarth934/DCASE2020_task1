@@ -48,6 +48,8 @@ for i in range(len(wavpath)):
     feat_data = (feat_data - np.min(feat_data)) / (np.max(feat_data) - np.min(feat_data))
     feature_data = {'feat_data': feat_data,}
 
+    print(feat_data.shape)
+
     # cur_file_name = output_path + wavpath[i][5:-3] + feature_type
     cur_file_name = output_path + wp[5:-3] + feature_type
     pickle.dump(feature_data, open(cur_file_name, 'wb'), protocol=pickle.HIGHEST_PROTOCOL)

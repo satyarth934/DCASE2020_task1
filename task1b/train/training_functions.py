@@ -68,7 +68,6 @@ class Generator_balanceclass_timefreqmask_nocropping_splitted():
                     lines = indexes[s:e]
                     X_train, y_train = load_data_2020_splitted(self.feat_path, train_csv_balanceclass, self.feat_dim, lines, 'logmel')
                     y_train = keras.utils.to_categorical(y_train, 3)
-
                     
                     itr_num = int(cur_item_num // (self.batch_size * 2))
                     for i in range(itr_num):

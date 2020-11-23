@@ -30,7 +30,7 @@ train_csv = data_path + 'evaluation_setup/fold1_train.csv'
 val_csv = data_path + 'evaluation_setup/fold1_evaluate.csv'
 # feat_path = 'features/logmel128_scaled_d_dd/'
 feat_path = '../../data/features/logmel128_scaled/'
-experiments = 'exp_smallfcnn'
+experiments = 'exp_mobnet'
 
 if not os.path.exists(experiments):
     os.makedirs(experiments)
@@ -43,7 +43,7 @@ num_freq_bin = 128
 num_time_bin = 461
 num_classes = 3
 max_lr = 0.1
-batch_size = 32
+batch_size = 16
 num_epochs = 500
 mixup_alpha = 0.4
 sample_num = len(open(train_csv, 'r').readlines()) - 1
@@ -63,8 +63,8 @@ model.summary()
 lr_scheduler = LR_WarmRestart(nbatch=np.ceil(sample_num/batch_size), Tmult=2,
                               initial_lr=max_lr, min_lr=max_lr*1e-4,
                               epochs_restart = [3.0, 7.0, 15.0, 31.0, 63.0,127.0,255.0]) 
-save_path = experiments + "/model-{epoch:02d}-{val_acc:.4f}.hdf5"
-checkpoint = keras.callbacks.ModelCheckpoint(save_path, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
+save_path = experiments + "/model-{epoch:02d}-{val_accuracy:.4f}.hdf5"
+checkpoint = keras.callbacks.ModelCheckpoint(save_path, monitor='val_accuracy', verbose=1, save_best_only=False, mode='max')
 callbacks = [lr_scheduler, checkpoint]
 
 train_data_generator = Generator_balanceclass_timefreqmask_nocropping_splitted(feat_path, train_csv, total_csv, experiments, num_freq_bin, 
