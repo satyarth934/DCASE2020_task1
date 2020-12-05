@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-56-generic-x86_64-with-glibc2.29",
+    "python": "3.8.2",
+    "heartbeatAt": "2020-12-03T06:07:24.765285",
+    "startedAt": "2020-12-03T06:07:23.717667",
+    "docker": null,
+    "gpu": "GeForce RTX 2070",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "codePath": "code/train/train_custom.py",
+    "program": "train_custom.py",
+    "git": {
+        "remote": "https://github.com/satyarth934/DCASE2020_task1.git",
+        "commit": "a72234d9456086f1024f119505fc84801a383813"
+    },
+    "email": "satyarth934@gmail.com",
+    "root": "/home/satyarth934/Projects/Fall2020/cmsc727/Project/DCASE2020_task1",
+    "host": "0d40309a5957",
+    "username": "satyarth934",
+    "executable": "/usr/bin/python"
+}

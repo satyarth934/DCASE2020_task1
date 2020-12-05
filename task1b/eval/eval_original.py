@@ -26,8 +26,16 @@ config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
 session = tf.compat.v1.InteractiveSession(config=config)
 
-val_csv = 'data_2020/evaluation_setup/fold1_evaluate.csv'
-feat_path = 'features/logmel128_scaled_d_dd/'
+# val_csv = 'data_2020/evaluation_setup/fold1_evaluate.csv'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+# model_path = '../pretrained_models/smallfcnn-model-0.9618.hdf5'
+
+data_path = '../data_2020/'
+train_csv = data_path + 'evaluation_setup/fold1_train.csv'
+val_csv = data_path + 'evaluation_setup/fold1_evaluate.csv'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+feat_path = '../../data/features/logmel128_scaled/'
+experiments = 'exp_mobnet'
 model_path = '../pretrained_models/smallfcnn-model-0.9618.hdf5'
 
 num_freq_bin = 128

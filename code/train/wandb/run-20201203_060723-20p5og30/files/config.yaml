@@ -1,0 +1,40 @@
+wandb_version: 1
+
+Dataset:
+  desc: null
+  value: DCASE Task 1b
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.11
+    framework: tensorflow
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.2
+batch_size:
+  desc: null
+  value: 16
+max_lr:
+  desc: null
+  value: 0.1
+mixup_alpha:
+  desc: null
+  value: 0.4
+num_audio_channels:
+  desc: null
+  value: 2
+num_classes:
+  desc: null
+  value: 3
+num_epochs:
+  desc: null
+  value: 5
+num_freq_bin:
+  desc: null
+  value: 128
+num_time_bin:
+  desc: null
+  value: 461
+sample_num:
+  desc: null
+  value: 9185

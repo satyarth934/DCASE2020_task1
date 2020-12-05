@@ -17,9 +17,18 @@ import pandas as pd
 num_freq_bin = 128
 num_classes = 3
 
-val_csv = 'data_2020/evaluation_setup/fold1_evaluate.csv'
-feat_path = 'features/logmel128_scaled_d_dd/'
-model_path = '../pretrained_models/smallfcnn-model-0.9618-quantized.tflite'
+# val_csv = 'data_2020/evaluation_setup/fold1_evaluate.csv'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+# model_path = '../pretrained_models/smallfcnn-model-0.9618-quantized.tflite'
+
+data_path = '../data_2020/'
+# train_csv = data_path + 'evaluation_setup/fold1_train.csv'
+val_csv = data_path + 'evaluation_setup/fold1_evaluate.csv'
+# feat_path = 'features/logmel128_scaled_d_dd/'
+feat_path = '../../data/features/logmel128_scaled/'
+experiments = 'exp_mobnet'
+model_path = '../quantization/name-the-quantized-model-here.tflite' if len(sys.argv) < 2 else sys.argv[1]
+
 data_val, y_val = load_data_2020(feat_path, val_csv, num_freq_bin, 'logmel')
 y_val_onehot = tf.keras.utils.to_categorical(y_val, num_classes)
 print(data_val.shape)

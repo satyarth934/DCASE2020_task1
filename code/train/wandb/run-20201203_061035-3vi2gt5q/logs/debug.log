@@ -1,0 +1,86 @@
+2020-12-03 06:10:35,682 INFO    MainThread:1360 [wandb_setup.py:_flush():70] setting env: {}
+2020-12-03 06:10:35,683 INFO    MainThread:1360 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2020-12-03 06:10:35,683 INFO    MainThread:1360 [wandb_setup.py:_flush():70] setting login settings: {}
+2020-12-03 06:10:35,683 INFO    MainThread:1360 [wandb_init.py:_log_setup():303] Logging user logs to /home/satyarth934/Projects/Fall2020/cmsc727/Project/DCASE2020_task1/code/train/wandb/run-20201203_061035-3vi2gt5q/logs/debug.log
+2020-12-03 06:10:35,684 INFO    MainThread:1360 [wandb_init.py:_log_setup():304] Logging internal logs to /home/satyarth934/Projects/Fall2020/cmsc727/Project/DCASE2020_task1/code/train/wandb/run-20201203_061035-3vi2gt5q/logs/debug-internal.log
+2020-12-03 06:10:36,815 INFO    MainThread:1360 [wandb_run.py:_console_start():1218] atexit reg
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [wandb_run.py:_redirect():1085] redirect: SettingsConsole.REDIRECT
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [wandb_run.py:_redirect():1088] Redirecting console.
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [redirect.py:install():204] install start
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [redirect.py:install():219] install stop
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [redirect.py:install():204] install start
+2020-12-03 06:10:36,816 INFO    MainThread:1360 [redirect.py:install():219] install stop
+2020-12-03 06:10:36,817 INFO    MainThread:1360 [wandb_run.py:_redirect():1132] Redirects installed.
+2020-12-03 06:10:37,362 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set num_audio_channels = 2 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,362 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb num_audio_channels 2 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2}
+2020-12-03 06:10:37,362 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set num_freq_bin = 128 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,362 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb num_freq_bin 128 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128}
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set num_time_bin = 461 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb num_time_bin 461 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461}
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set num_classes = 3 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb num_classes 3 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3}
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set max_lr = 0.1 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb max_lr 0.1 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3, 'max_lr': 0.1}
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set batch_size = 16 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,363 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb batch_size 16 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3, 'max_lr': 0.1, 'batch_size': 16}
+2020-12-03 06:10:37,364 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set num_epochs = 5 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,364 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb num_epochs 5 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3, 'max_lr': 0.1, 'batch_size': 16, 'num_epochs': 5}
+2020-12-03 06:10:37,364 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set mixup_alpha = 0.4 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,364 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb mixup_alpha 0.4 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3, 'max_lr': 0.1, 'batch_size': 16, 'num_epochs': 5, 'mixup_alpha': 0.4}
+2020-12-03 06:10:37,366 INFO    MainThread:1360 [wandb_config.py:__setitem__():135] config set sample_num = 9185 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f59b89417c0>>
+2020-12-03 06:10:37,366 INFO    MainThread:1360 [wandb_run.py:_config_callback():547] config_cb sample_num 9185 {'Dataset': 'DCASE Task 1b', 'exp_no': 2, '_wandb': {'cli_version': '0.10.11', 'python_version': '3.8.2', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'tensorflow'}, 'num_audio_channels': 2, 'num_freq_bin': 128, 'num_time_bin': 461, 'num_classes': 3, 'max_lr': 0.1, 'batch_size': 16, 'num_epochs': 5, 'mixup_alpha': 0.4, 'sample_num': 9185}
+2020-12-03 06:41:55,848 INFO    MainThread:1360 [wandb_run.py:_atexit_cleanup():1188] got exitcode: 0
+2020-12-03 06:41:55,856 INFO    MainThread:1360 [wandb_run.py:_restore():1160] restore
+2020-12-03 06:41:55,856 INFO    MainThread:1360 [redirect.py:uninstall():223] uninstall start
+2020-12-03 06:41:55,857 INFO    MainThread:1360 [redirect.py:_stop():278] _stop: stdout
+2020-12-03 06:41:55,857 INFO    MainThread:1360 [redirect.py:_stop():284] _stop closed: stdout
+2020-12-03 06:41:55,858 INFO    stdout    :1360 [redirect.py:_pipe_relay():120] relay done saw last write: stdout
+2020-12-03 06:41:55,858 INFO    stdout    :1360 [redirect.py:_pipe_relay():136] relay done done: stdout
+2020-12-03 06:41:55,858 INFO    MainThread:1360 [redirect.py:_stop():290] _stop joined: stdout
+2020-12-03 06:41:55,858 INFO    MainThread:1360 [redirect.py:_stop():292] _stop rd closed: stdout
+2020-12-03 06:41:55,858 INFO    MainThread:1360 [redirect.py:uninstall():227] uninstall done
+2020-12-03 06:41:55,858 INFO    MainThread:1360 [redirect.py:uninstall():223] uninstall start
+2020-12-03 06:41:55,859 INFO    MainThread:1360 [redirect.py:_stop():278] _stop: stderr
+2020-12-03 06:41:55,859 INFO    MainThread:1360 [redirect.py:_stop():284] _stop closed: stderr
+2020-12-03 06:41:55,859 INFO    stderr    :1360 [redirect.py:_pipe_relay():120] relay done saw last write: stderr
+2020-12-03 06:41:55,859 INFO    stderr    :1360 [redirect.py:_pipe_relay():136] relay done done: stderr
+2020-12-03 06:41:55,859 INFO    MainThread:1360 [redirect.py:_stop():290] _stop joined: stderr
+2020-12-03 06:41:55,859 INFO    MainThread:1360 [redirect.py:_stop():292] _stop rd closed: stderr
+2020-12-03 06:41:55,859 INFO    MainThread:1360 [redirect.py:uninstall():227] uninstall done
+2020-12-03 06:41:55,872 INFO    MainThread:1360 [wandb_run.py:_wait_for_finish():1305] got exit ret: uuid: "8e4866d9b7504761a01fecbb1add32cd"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 1
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 412838
+      total_bytes: 412838
+    }
+  }
+}
+
+2020-12-03 06:41:57,891 INFO    MainThread:1360 [wandb_run.py:_wait_for_finish():1305] got exit ret: uuid: "8cb89e30f4af48669fec19b3a263f4c5"
+response {
+  poll_exit_response {
+    done: true
+    exit_result {
+    }
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+      other_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 797645
+      total_bytes: 797645
+    }
+  }
+}
+
+2020-12-03 06:41:59,624 INFO    MainThread:1360 [wandb_run.py:_show_summary():1450] rendering summary
+2020-12-03 06:41:59,627 INFO    MainThread:1360 [wandb_run.py:_show_history():1488] rendering history
+2020-12-03 06:41:59,627 INFO    MainThread:1360 [wandb_run.py:_show_files():1517] logging synced files
+2020-12-03 06:41:59,637 INFO    MainThread:1360 [internal.py:handle_exit():138] Internal process exited
