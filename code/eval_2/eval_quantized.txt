@@ -1,0 +1,156 @@
+===== MODEL: ../train_2/wandb/run-20201206_232308-20zf33ta/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr8000_10secs_nodelta -----
+
+Test acc: 0.735
+Test log loss: 0.688
+Confusion matrix:
+[[ 930  266  101]
+ [ 324 1233   47]
+ [ 184  189  911]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.717 0.769 0.71 ]
+inference_time: 0.0012333393096923828
+
+===== MODEL: ../train_2/wandb/run-20201206_222303-no6fl18k/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr8000_10secs_nodelta -----
+
+Test acc: 0.761
+Test log loss: 0.654
+Confusion matrix:
+[[1045  134  118]
+ [ 333 1191   80]
+ [ 268   66  950]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.806 0.743 0.74 ]
+inference_time: 0.0012781620025634766
+
+===== MODEL: ../train_2/wandb/run-20201206_195151-9kebg1uj/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr8000_10secs -----
+
+Test acc: 0.778
+Test log loss: 0.637
+Confusion matrix:
+[[1008  158  131]
+ [ 304 1221   79]
+ [ 185   70 1029]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.777 0.761 0.801]
+inference_time: 0.0012128353118896484
+
+===== MODEL: ../train_2/wandb/run-20201206_195731-lpjydpz2/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr12000_5secs -----
+
+Test acc: 0.736
+Test log loss: 0.696
+Confusion matrix:
+[[1063  100  134]
+ [ 409 1043  152]
+ [ 260   50  974]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.82  0.65  0.759]
+inference_time: 0.0009293556213378906
+
+===== MODEL: ../train_2/wandb/run-20201206_171011-358h4nim/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr24000_5secs -----
+
+Test acc: 0.792
+Test log loss: 0.606
+Confusion matrix:
+[[1109  102   86]
+ [ 369 1175   60]
+ [ 198   54 1032]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.855 0.733 0.804]
+inference_time: 0.002043485641479492
+
+===== MODEL: ../train_2/wandb/run-20201206_165246-2wvyewts/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr24000_5secs -----
+
+Test acc: 0.789
+Test log loss: 0.642
+Confusion matrix:
+[[1041  126  130]
+ [ 325 1181   98]
+ [ 152   50 1082]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.803 0.736 0.843]
+inference_time: 0.0018401145935058594
+
+===== MODEL: ../train_2/wandb/run-20201206_181621-1nmj0zhj/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr24000_10secs -----
+
+Test acc: 0.798
+Test log loss: 0.616
+Confusion matrix:
+[[1163   69   65]
+ [ 414 1158   32]
+ [ 215   49 1020]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.897 0.722 0.794]
+inference_time: 0.003620624542236328
+
+===== MODEL: ../train_2/wandb/run-20201206_194108-165xrxp2/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled_singlechannel_sr32000_5secs -----
+
+Test acc: 0.789
+Test log loss: 0.621
+Confusion matrix:
+[[1079  131   87]
+ [ 319 1224   61]
+ [ 226   59  999]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.832 0.763 0.778]
+inference_time: 0.002953767776489258
+
+===== MODEL: ../train_2/wandb/run-20201206_074624-7hxzif83/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled -----
+
+Test acc: 0.820
+Test log loss: 0.576
+Confusion matrix:
+[[1150   43  104]
+ [ 434 1143   27]
+ [ 125   19 1140]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.887 0.713 0.888]
+inference_time: 0.0223386287689209
+
+===== MODEL: ../train_2/wandb/run-20201206_070110-2a5pwrd1/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled -----
+
+Test acc: 0.843
+Test log loss: 0.529
+Confusion matrix:
+[[1120   64  113]
+ [ 314 1229   61]
+ [  90   15 1179]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.864 0.766 0.918]
+inference_time: 0.008775472640991211
+
+===== MODEL: ../train_2/wandb/run-20201206_055755-1abfsyiw/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled -----
+
+Test acc: 0.893
+Test log loss: 0.487
+Confusion matrix:
+[[1110   85  102]
+ [ 146 1445   13]
+ [  76   24 1184]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.856 0.901 0.922]
+inference_time: 0.01729106903076172
+
+===== MODEL: ../train_2/wandb/run-20201206_043509-6gp9ibcm/files/model-best-quantized.tflite =====
+----- DATA: ../../data/features/logmel128_scaled -----
+
+Test acc: 0.897
+Test log loss: 0.418
+Confusion matrix:
+[[1089   97  111]
+ [ 113 1471   20]
+ [  82   10 1192]]
+Class names: ['indoor' 'outdoor' 'transportation']
+Per-class test acc: [0.84  0.917 0.928]
+inference_time: 0.020468950271606445
+

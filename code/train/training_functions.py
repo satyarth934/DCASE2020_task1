@@ -30,7 +30,7 @@ def threadsafe_generator(f):
 
     
 class Generator_balanceclass_timefreqmask_nocropping_splitted():
-    def __init__(self, feat_path, train_csv, total_csv, experiments, feat_dim, batch_size=32, alpha=0.4, shuffle=True, splitted_num=4): 
+    def __init__(self, feat_path, train_csv, total_csv, experiments, feat_dim, batch_size=32, alpha=0.4, shuffle=True, splitted_num=4, sample_num=None): 
         self.feat_path = feat_path
         self.train_csv = train_csv
         self.total_csv = total_csv
@@ -38,7 +38,7 @@ class Generator_balanceclass_timefreqmask_nocropping_splitted():
         self.batch_size = batch_size
         self.alpha = alpha
         self.shuffle = shuffle
-        self.sample_num = len(open(train_csv, 'r').readlines()) - 1
+        self.sample_num = (len(open(train_csv, 'r').readlines()) - 1) if sample_num is None else sample_num
         self.lock = threading.Lock()
         self.swap_inds = [1, 0, 3, 2, 5, 4]
         self.splitted_num = splitted_num

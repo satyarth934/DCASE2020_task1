@@ -23,7 +23,9 @@ def time_masking(mel_spectrogram, time_masking_para=40, time_mask_num=1):
 
     for i in range(time_mask_num):
         t = random.randrange(0, time_masking_para)
-        t0 = random.randrange(0, fbank_size[1] - t)
+        # t0 = random.randrange(0, fbank_size[1] - t)
+        diff = fbank_size[1] - t
+        t0 = random.randrange(0, diff if diff > 0 else fbank_size[1])
 
         if (t0 == t0 + t):
             continue

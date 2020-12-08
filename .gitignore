@@ -5,3 +5,15 @@ data/
 task1b/train/exp_mobnet/
 task1b/train/exp_smallfcnn/
 small_data/
+code/train_2/wandb/
+code/train/wandb/
+code/train/__pycache__/
+code/train/exp_custom_expno_3/
+code/train/exp_custom_expno_4/
+code/train/exp_custom_expno_5/
+small_data_48each.zip
+small_data_48each/
+small_data_60each.zip
+small_data_60each/
+task1b/train/wandb/
+task1b/train/exp_mobnet_expno_1/

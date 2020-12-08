@@ -2,13 +2,15 @@ import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
+expno = 1 + max([0] + [int(d.split("_")[-1]) for d in os.listdir(".") if "exp_custom_expno_" in d])
+
 # Init wandb
 import wandb
 from wandb.keras import WandbCallback
 wandb.init(config={"Dataset": "DCASE Task 1b",
-					"exp_no": 2},
+					"exp_no": expno},
 			project="cmsc727-acoustic-scene-detector", 
-			notes="Experimentation with AutoEncoders. Trying without the decoder module.")
+			notes="Experimentation with AutoEncoders. Trying without the decoder module. Training on smaller dataset.")
 
 import numpy as np
 # import keras
@@ -54,15 +56,16 @@ def main():
 	# random sample data, to keep all three classes have similar number of training samples
 	total_csv = funcs.balance_class_data(train_csv, experiments)
 	
-	wandb.config.num_audio_channels = num_audio_channels = 2
-	wandb.config.num_freq_bin = num_freq_bin = 128
-	wandb.config.num_time_bin = num_time_bin = 461
-	wandb.config.num_classes = num_classes = 3
-	wandb.config.max_lr = max_lr = 0.1
-	wandb.config.batch_size = batch_size = 16
-	wandb.config.num_epochs = num_epochs = 5
-	wandb.config.mixup_alpha = mixup_alpha = 0.4
-	wandb.config.sample_num = sample_num = len(open(train_csv, 'r').readlines()) - 1
+	wandb.config.num_audio_channels	 = num_audio_channels = 2
+	wandb.config.num_freq_bin		 = num_freq_bin = 128
+	wandb.config.num_time_bin		 = num_time_bin = 461
+	wandb.config.num_classes		 = num_classes = 3
+	wandb.config.max_lr				 = max_lr = 0.1
+	wandb.config.batch_size			 = batch_size = 32
+	wandb.config.num_epochs			 = num_epochs = 5
+	wandb.config.mixup_alpha		 = mixup_alpha = 0.4
+	wandb.config.sample_num			 = sample_num = 500 	# number of training samples
+	# wandb.config.sample_num			 = sample_num = len(open(train_csv, 'r').readlines()) - 1
 
 	data_val, y_val = utils.load_data_2020(feat_path, val_csv, num_freq_bin, 'logmel')
 	y_val = tf.keras.utils.to_categorical(y_val, num_classes)
@@ -88,14 +91,14 @@ def main():
 
 	train_data_generator = training_functions.Generator_balanceclass_timefreqmask_nocropping_splitted(feat_path, train_csv, total_csv, experiments, num_freq_bin, 
 																batch_size=batch_size,
-																alpha=mixup_alpha, splitted_num=4)()
+																alpha=mixup_alpha, splitted_num=4, sample_num=sample_num)()
 
 	history = model.fit(train_data_generator,
 						validation_data=(data_val, y_val),
 						epochs=num_epochs, 
 						verbose=1, 
-						workers=2,
-						max_queue_size = 10,
+						workers=4,
+						max_queue_size = 20,
 						callbacks=callbacks,
 						steps_per_epoch=np.ceil(sample_num/batch_size)
 						)
